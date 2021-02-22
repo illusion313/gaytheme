@@ -1,0 +1,102 @@
+<script src="https://kit.fontawesome.com/070e99116c.js" crossorigin="anonymous"></script>
+
+<div class="body">
+    <ul class="vam-money1"><a class="link-bm" href="#">
+            <li class="vam-money2"><i class="fas fa-award"></i> همین حالا با خرید اکانت پرمیوم کیس مناسب تر پیدا کنید <i class="fas fa-award"></i>
+        </a><span title="بستن" class="close">⨯</span></li>
+    </ul>
+</div>
+
+<script>
+    var closebtns = document.getElementsByClassName("close");
+    var i;
+
+    for (i = 0; i < closebtns.length; i++) {
+        closebtns[i].addEventListener("click", function () {
+            this.parentElement.style.display = "none";
+        });
+    }
+</script>
+<style>
+    /* bmdec closeable button */
+    ul.vam-money1{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.vam-money1 {
+        margin-top: -1px;
+        /* Prevent double borders */
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(252, 246, 246);
+        display: block;
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        transition: 0.5s ease-out;
+    }
+
+    li.vam-money2 {
+        margin-top: -1px;
+        /* Prevent double borders */
+        padding: 25px;
+        text-decoration: none;
+        background-image: url(vipphoto.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        font-size: 20px;
+        color: black;
+        display: block;
+        position: relative;
+        text-align: center;
+        transition: 0.5s ease-out;
+        border-radius: 10px;
+    }
+
+    a.link-bm {
+        text-decoration: none;
+        color: #fcfcfc;
+    }
+
+    a.link-bm:hover {
+        color: #f6a00f;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        transition: 0.5s;
+    }
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        padding: 8px 14px;
+        transform: translate(0%, -50%);
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 0.15em #e70c0c;
+        box-sizing: border-box;
+        transition: 0.5s ease-out;
+    }
+
+    .close:hover {
+        background-color: #f6a00f;
+        transition: 0.5s;
+        color:black;
+    }
+
+    span.close {
+        background-color: white;
+        border-radius: 10%;
+        border: 1px rgb(206, 206, 206) solid;
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        margin-right: 60px;
+        color: rgb(117, 117, 117);
+        box-sizing: border-box;
+        transition: 0.5s ease-out;
+    }
+</style>

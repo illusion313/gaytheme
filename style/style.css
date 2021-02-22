@@ -1,0 +1,551 @@
+/*--------------------------------------------------
+Project : GayCity Theme
+Version : 1.0
+Price : 350t
+---------------------------------------------------*/
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+/*-------------------------------------------*/
+
+body.body {
+  direction: rtl;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  background-color: black;
+}
+
+/*این برای دکمه اسکرول به بالا می باشد*/
+.scroll {
+  background-color: #000000;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: auto !important;
+  opacity: 0;
+  transition: opacity 0.5s;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/*scroll show*/
+
+.scroll.show {
+  cursor: pointer !important;
+  opacity: 1;
+  transition: 0.5s;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/*این قسمت طراحی کل صفحه می باشد*/
+
+/*دکمه رفتن به بالا*/
+i.fa-arrow-alt-circle-up {
+  color: #f6a00f;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  outline: 0;
+}
+.scroll:hover {
+  border: 1px #f6a00f solid;
+  transition: 0.5s;
+  box-sizing: border-box;
+  outline: 0;
+}
+/*---------------------------------*/
+
+/*لوگو سایت*/
+img.site-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: auto;
+  max-width: 100%;
+}
+/*---------------------------------*/
+/*---------------------------------*/
+/*بک گراند هدر (لوگو)* */
+
+.main-header {
+  background-color: #1c1924;
+}
+/*---------------------------------*/
+a {
+  text-decoration: none;
+}
+
+/*---------------------------------*/
+
+/* اسلایدر صفحه */
+
+div.myslider {
+  background-color: red;
+}
+
+/* استایل عکس های اسلایدر */
+/*---------------------------------*/
+.img1,
+.img2,
+.img3 {
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  background-size: cover;
+}
+
+/* فلش های اسلایدر */
+
+span.glyphicon.glyphicon-chevron-left {
+  background-image: linear-gradient(black, #ba8b02, #181818);
+  border-radius: 50%;
+  background-color: red;
+}
+
+span.glyphicon.glyphicon-chevron-right {
+  background-image: linear-gradient(black, #ba8b02, #181818);
+  border-radius: 50%;
+}
+
+/*---------------------------------*/
+/* پیوند منو */
+.topnav .icon {
+  display: none;
+  transition: opacity 0.5s;
+}
+/*هارو ایکون منو موبایل */
+.topnav .icon:hover {
+  transition: opacity 0.5;
+  text-decoration: none;
+}
+/*---------------------------------*/
+
+/*
+وقتی صفحه نمایش کمتر از 600 پیکسل دارد ، همه پیوندها را به جز لینک اول ("صفحه اصلی")  
+(.icon) را باز و بسته کند نشان دهید
+  */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/*---------------------------------*/
+/* 
+هنگامی که کاربر روی نماد کلیک می کند ، کلاس "واکنش پذیر" با JavaScript به topnav
+اضافه می شود. این کلاس باعث می شود تا topnav در صفحه های کوچک خوب به نظر برسد
+(پیوندها را به جای افقی به صورت عمودی نشان دهید)
+*/
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: none;
+    text-align: left;
+  }
+}
+/*---------------------------------*/
+
+/*هاور دکمه خانه */
+
+/*---------------------------------*/
+
+/* اسکرول بار صفحه */
+
+html {
+  --scrollbarBG: #f6a00f;
+  --thumbBG: #181819;
+}
+body::-webkit-scrollbar {
+  width: 14px;
+}
+body {
+  scrollbar-width: 12px;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 1px solid var(--scrollbarBG);
+  overflow-y: scroll;
+}
+
+/*---------------------------------*/
+/* li and a fonts */
+li,
+a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 16;
+  text-decoration: none;
+}
+/* فاصله اسلایدر با هدر */
+div.mysilder {
+  margin-top: -20px;
+}
+/* مرجین به بالا لوگو */
+a.navbar-brand {
+  margin-top: -10px;
+  transition: all 0.5s;
+}
+/* هاور شدن لوگو */
+a.navbar-brand:hover {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  filter: saturate(10);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.9;
+  lighting-color: red;
+  transition: all 0.5s;
+}
+
+/* بار ایکس منو */
+
+/*hr res*/
+@media only screen and (min-width: 766px) {
+  .hr-menu {
+    display: none;
+  }
+}
+
+.hr-menu {
+  padding: 3px;
+  border-radius: 10px;
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
+}
+/* <!-- closeable tab for ads or vip accounts --> */
+
+ul.vam-money1 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.vam-money1 {
+  margin-top: -1px;
+  /* Prevent double borders */
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(252, 246, 246);
+  display: block;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+}
+
+li.vam-money2 {
+  margin-top: -1px;
+  /* Prevent double borders */
+  padding: 30px;
+  text-decoration: none;
+  background-image: url(/images/vipphoto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 20px;
+  color: black;
+  display: block;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease-out;
+  border-radius: 10px;
+}
+
+a.link-bm {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-size: 20px;
+}
+
+a.link-bm:hover {
+  color: #f6a00f;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  transition: 0.5s ease-out;
+  text-decoration: none;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 8px 14px;
+  transform: translate(0%, -50%);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 0.15em #e70c0c;
+  box-sizing: border-box;
+  transition: 0.5s ease-out;
+  opacity: 0.9;
+}
+
+span.close:hover {
+  background-color: #fe9900;
+  transition: 0.5s;
+  color: black;
+  opacity: 0.8;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+}
+
+span.close {
+  background-color: white;
+  border-radius: 10%;
+  border: 1px rgb(206, 206, 206) solid;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  margin-right: 60px;
+  color: rgb(117, 117, 117);
+  box-sizing: border-box;
+  transition: 0.5s ease-out;
+  opacity: 0.9;
+}
+
+li.vam-money2:hover {
+  transition: 0.5s ease-out;
+}
+
+/* <!-- closeable tab for ads or vip accounts --> */
+
+@media only screen and (max-width: 600px) {
+  a.link-bm {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  span.close {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  span.close {
+    padding: 4px 8px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  span.close {
+    padding: 4px 8px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  a.link-bm {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 250px) {
+  span.close {
+    margin-right: 1px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  li.vam-money2 {
+    background-image: url(/images/vipphoto1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* <!-- menu --> */
+
+.menu {
+  border-radius: 5px;
+  transition: 0.3s ease-out;
+}
+
+.menu:hover {
+  background: #fe9900;
+  box-shadow: 0 0px 5px rgb(0 0 0 / 20%), 0 2px 5px rgb(0 0 0 / 17%);
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+}
+
+.menu:active {
+  background-color: red;
+  transition: 0.3s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu:hover {
+    background: #fe9900;
+    box-shadow: 0 0px 5px rgb(0 0 0 / 20%), 0 2px 5px rgb(0 0 0 / 17%);
+    border-radius: 10px;
+    transition: 0.5s ease-out;
+    padding-right: 15px;
+    margin-left: 50%;
+  }
+}
+
+button.navbar-toggle {
+  background-color: #fe9900;
+}
+
+button.navbar-toggle.collapsed:hover {
+  background-color: #fe9900;
+}
+
+.menu-text {
+  color: white;
+  display: inline;
+  top: 14px;
+  right: 8px;
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+  opacity: 0.9;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-text {
+    display: none;
+  }
+}
+/* <!-- menu --> */
+
+#gay-text {
+  margin-top: 100px;
+  right: 80px;
+  font-family: "Noto Naskh Arabic", sans-serif;
+  font-style: bold;
+  font-weight: bold;
+  left: 120px;
+  width: 600px;
+  color: #000000;
+  border-radius: 10px;
+  line-height: 30px;
+  background: #fe9900;
+  background: -webkit-linear-gradient(to right, #fe9900, #ffa600);
+  background: linear-gradient(to right, #fe9900, #e98808);
+  box-shadow: 0 0px 10px rgb(0 0 0 / 20%), 0 8px 8px rgb(0 0 0 / 17%);
+}
+.gay-img {
+  width: 500px;
+  height: 400px;
+}
+
+.gay-text1 {
+  background-image: url(/images/background-gaycity.png);
+  overflow: hidden;
+  z-index: 2;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+/* main article text */
+
+.go-to-article-btn {
+  margin-right: 400px;
+  margin-bottom: 30px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  background: #131313;
+  box-shadow: 0 0px 5px rgb(0 0 0 / 20%), 0 2px 5px rgb(0 0 0 / 17%);
+  transition: 0.5s ease-out;
+  box-sizing: border-box;
+  color: white;
+  outline: none;
+  transition: all 0.5s;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.go-to-article-btn:hover {
+  background-color: #fe9900;
+  outline: none;
+  border: none;
+  color: black;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 20%), 0 5px 8px rgb(0 0 0 / 17%);
+  position: relative;
+  bottom: 2px;
+  transition: all 0.5s;
+  display: inline;
+}
+
+a.go-to-article-btn1 {
+  color: white;
+  outline: none;
+  transition: 0.5s ease-out;
+}
+
+a.go-to-article-btn1:hover {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s ease-out;
+}
+
+.best-site {
+  position: absolute;
+  bottom: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+
+/* افکت تایپینگ */
+.typewriter h1 {
+  color: rgba(0, 0, 0, 0.85);
+  font-family: "Noto Naskh Arabic", sans-serif;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 81, 0);
+  white-space: nowrap;
+  font-weight: bolder;
+  animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #b20f2c;
+  }
+}
+/* افکت تایپینگ */
